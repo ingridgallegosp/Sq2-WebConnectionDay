@@ -19,7 +19,20 @@ const Home = () => {
     
     return (
         <div>
-            <p>este es home</p>
+            <div className='contenido'>
+                {
+                    //cambio items por results
+                    items?.map(item =>
+                        <Card
+                            key={item.id}
+                            images={item.images}
+                            title={item.title}
+                            price={item.price}
+                            discount={item.discountPercentage}
+                            description={item.description}
+                        ></Card>)
+                }
+            </div>
         </div>
     )
 }
