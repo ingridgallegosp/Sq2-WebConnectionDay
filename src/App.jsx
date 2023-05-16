@@ -19,11 +19,10 @@ const App = () => {
     
         <BrowserRouter>
             <CartContextProvider>
-                <AppRoutes>
-
+                <AppRoutes
                 </AppRoutes>
             </CartContextProvider>
-        </BrowserRouter>
+       </BrowserRouter>
     ) 
 }
 

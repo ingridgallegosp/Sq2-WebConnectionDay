@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Card from '../../Componentes/Card'
 import './style.css'
+import BarrNav from './Componentes/BarrNav'
 
 const Home = () => {
     const [items, setItems] = useState(null)
@@ -17,9 +18,9 @@ const Home = () => {
             .catch((e) => console.log(e))
     }, []);
 
-    
     return (
         <div>
+            <BarrNav/>
             <div className='contenido'>
                 {
                     //cambio items por results
@@ -35,6 +36,7 @@ const Home = () => {
                 }
             </div>
         </div>
+
     )
 }
 export default Home

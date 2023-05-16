@@ -1,0 +1,10 @@
+.Barr-container{
+    color: aliceblue;
+   background-color:#A1CDBD;
+    font-family: 'Poppins';
+
+}
+.carro{
+    display:flex;
+    justify-content: space-evenly;
+}
