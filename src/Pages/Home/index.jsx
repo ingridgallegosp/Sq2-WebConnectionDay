@@ -1,5 +1,6 @@
 import { useEffect,useState } from 'react'
 import './style.css'
+import BarrNav from './Componentes/BarrNav'
 
 const Home = () => {
     const [items, setItems] = useState(null)
@@ -17,8 +18,10 @@ const Home = () => {
     }, []);
 
     
-    return (
-        <p>este es home</p>
+    return (<>  
+     <BarrNav/>
+    </>
+     
 
     )
 }
