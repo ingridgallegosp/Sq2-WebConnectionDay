@@ -18,8 +18,9 @@ const Home = () => {
 
     
     return (
-        <p>este es home</p>
-
+        <div><p>este es home</p>
+            <img src='src/assets/sobre.svg' alt=''/>
+        </div>
     )
 }
 export default Home
