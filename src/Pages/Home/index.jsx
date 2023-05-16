@@ -1,4 +1,5 @@
-import { useEffect,useState } from 'react'
+import { useEffect, useState } from 'react'
+import Card from '../../Componentes/Card'
 import './style.css'
 import BarrNav from './Componentes/BarrNav'
 
@@ -17,11 +18,24 @@ const Home = () => {
             .catch((e) => console.log(e))
     }, []);
 
-    
-    return (<>  
-     <BarrNav/>
-    </>
-     
+    return (
+        <div>
+            <BarrNav/>
+            <div className='contenido'>
+                {
+                    //cambio items por results
+                    items?.map(item =>
+                        <Card
+                            key={item.id}
+                            images={item.images}
+                            title={item.title}
+                            price={item.price}
+                            discount={item.discountPercentage}
+                            description={item.description}
+                        ></Card>)
+                }
+            </div>
+        </div>
 
     )
 }
