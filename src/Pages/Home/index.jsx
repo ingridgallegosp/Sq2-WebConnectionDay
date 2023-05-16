@@ -18,8 +18,8 @@ const Home = () => {
 
     
     return (
-        <div><p>este es home</p>
-            <img src='src/assets/sobre.svg' alt=''/>
+        <div>
+            <p>este es home</p>
         </div>
     )
 }
