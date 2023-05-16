@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import Card from '../../Componentes/Card'
-import './style.css'
 import BarrNav from './Componentes/BarrNav'
+//import ProductDetail from '../../Componentes/Product Detail'
+import './style.css'
+
 
 const Home = () => {
     const [items, setItems] = useState(null)
@@ -18,12 +20,13 @@ const Home = () => {
             .catch((e) => console.log(e))
     }, []);
 
+    
+
     return (
         <div>
             <BarrNav/>
             <div className='contenido'>
                 {
-                    //cambio items por results
                     items?.map(item =>
                         <Card
                             key={item.id}
@@ -34,6 +37,7 @@ const Home = () => {
                             description={item.description}
                         ></Card>)
                 }
+                
             </div>
         </div>
 
