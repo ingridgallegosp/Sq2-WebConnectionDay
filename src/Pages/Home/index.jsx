@@ -37,7 +37,7 @@ const Home = () => {
                             description={item.description}
                         ></Card>)
                 }
-                
+            {/* <ProductDetail/> */}
             </div>
         </div>
 

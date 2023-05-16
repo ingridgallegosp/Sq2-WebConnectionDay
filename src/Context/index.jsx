@@ -10,6 +10,8 @@ export const CartContextProvider = ({ children }) => {
     const [count, setCount] = useState(0)
     //console.log('count' + count)
 
+    const [productToShow, setProductToShow] = useState({})
+
 
     return (
     //llamamos al proveedor del contexto y hacemos un wrapper - con el q provee la info del contexto
@@ -24,3 +26,4 @@ export const CartContextProvider = ({ children }) => {
         </CartContext.Provider>   
     )
 }
+

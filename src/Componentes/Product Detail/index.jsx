@@ -1,21 +1,23 @@
 import { useContext } from "react"
+import { CartContext } from "../../Context"
+
 
 const ProductDetail = () => {
+
  
-    // const context = useContext(ShopCartContext)
-    // console.log('PRODUCT TO SHOW: ', context. productToShow)
+    const context = useContext(CartContext)
+    console.log('PRODUCT TO SHOW: ', context. productToShow)
     return (
         <aside
-        {`${context.isProductDetailOpen ? 'flex' : 'hidden'}`}>
+            className={`${context.isProductDetailOpen ? 'flex' : 'hidden'}`}>
             <div >
                 <h2>Detail</h2>
-                <div >
-                        onClick={() => context.closeProductDetail()}
+                <div onClick={() => context.closeProductDetail()}>
+                        
                 </div> 
             </div>
             <figure>
                 <img 
-           
                 src={context.productToShow.images} 
                 alt={context.productToShow.title}/>
             </figure>
